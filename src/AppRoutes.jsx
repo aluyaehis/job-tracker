@@ -5,6 +5,7 @@ import ForgotPassword from './pages/auth/ForgotPassword';
 import ResetPassword from './pages/auth/ResetPassword';
 import DashboardHome from './pages/dashboard/DashboardHome';
 import ProtectedRoute from './components/ProtectedRoute';
+import JobPage from './pages/jobs/JobPage';
 
 const AppRoute = () => {
   return (
@@ -19,6 +20,14 @@ const AppRoute = () => {
         element={
           <ProtectedRoute>
             <DashboardHome />
+          </ProtectedRoute>
+        }
+      />
+      <Route
+        path="/jobs"
+        element={
+          <ProtectedRoute>
+            <JobPage />
           </ProtectedRoute>
         }
       />
